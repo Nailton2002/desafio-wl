@@ -22,13 +22,13 @@ public class Funcionario {
 	@CPF(message = "CPF invalido")
 	private String cpf;
 
-	@NotBlank(message = "Iten obrigatório")
-	private String iten1CafeManha;
+	@NotBlank(message = "Item obrigatório")
+	private String item1CafeManha;
 
-	private String iten2CafeManha;
+	private String item2CafeManha;
 
 	public String compararItens() {
-		if (iten1CafeManha == iten2CafeManha) {
+		if (item1CafeManha == item2CafeManha) {
 			return "Itens iguais não pode!";
 		}
 		return "Itens diferentes pode!";
@@ -37,27 +37,27 @@ public class Funcionario {
 	public Funcionario() {
 	}
 
-	public Funcionario(String nome, String cpf, String itens1String, String iten1CafeManha, String iten2CafeManha) {
+	public Funcionario(String nome, String cpf, String itens1String, String item1CafeManha, String item2CafeManha) {
 		this.nome = nome;
 		this.cpf = cpf;
-		this.iten1CafeManha = iten1CafeManha;
-		this.iten2CafeManha = iten2CafeManha;
+		this.item1CafeManha = item1CafeManha;
+		this.item2CafeManha = item2CafeManha;
 	}
 
-	public String getIten2CafeManha() {
-		return iten2CafeManha;
+	public String getItem2CafeManha() {
+		return item2CafeManha;
 	}
 
-	public void setIten2CafeManha(String iten2CafeManha) {
-		this.iten2CafeManha = iten2CafeManha;
+	public void setItem2CafeManha(String item2CafeManha) {
+		this.item2CafeManha = item2CafeManha;
 	}
 
-	public String getIten1CafeManha() {
-		return iten1CafeManha;
+	public String getItem1CafeManha() {
+		return item1CafeManha;
 	}
 
-	public void setIten1CafeManha(String iten1CafeManha) {
-		this.iten1CafeManha = iten1CafeManha;
+	public void setItem1CafeManha(String item1CafeManha) {
+		this.item1CafeManha = item1CafeManha;
 	}
 
 	public Long getId() {
@@ -86,8 +86,8 @@ public class Funcionario {
 
 	@Override
 	public String toString() {
-		return "Funcionario [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", iten2CafeManha=" + iten2CafeManha
-				+ ", iten1CafeManha=" + iten1CafeManha + "]";
+		return "Funcionario [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", item2CafeManha=" + item2CafeManha
+				+ ", item1CafeManha=" + item1CafeManha + "]";
 	}
 
 }

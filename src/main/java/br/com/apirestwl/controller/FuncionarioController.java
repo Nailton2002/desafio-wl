@@ -56,10 +56,9 @@ public class FuncionarioController {
 
 		Funcionario funcionarioCpfExistente = this.getFuncionario(funcionario.getCpf());
 		
-		if (funcionarioCpfExistente == null) {
+		if (funcionarioCpfExistente == null || funcionario.compararItens() == null) {
 			funcionarioRepository.save(funcionario);
 			return new ResponseEntity<String>("Salvo com sucesso!", HttpStatus.CREATED);
-			
 		} else {
 			return new ResponseEntity<String>("Já existe este cpf", HttpStatus.NOT_FOUND);
 		}

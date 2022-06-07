@@ -5,13 +5,13 @@ public class Teste {
 	public static void main(String[] args) {
 		
 		Funcionario funcionario = new Funcionario();
-		funcionario.setIten1CafeManha("leite");
-		funcionario.setIten2CafeManha("leite");
+		funcionario.setItem1CafeManha("leite");
+		funcionario.setItem2CafeManha("leite");
 		System.out.println("Funcionario com, " + funcionario.compararItens());
 		
 		Funcionario funcionario1 = new Funcionario();
-		funcionario1.setIten1CafeManha("Pão");
-		funcionario1.setIten2CafeManha("Café");
+		funcionario1.setItem1CafeManha("Pão");
+		funcionario1.setItem2CafeManha("Café");
 		System.out.println("Funcionario com, " + funcionario1.compararItens());
 	}
 
