@@ -16,4 +16,5 @@ public interface FuncionarioRepository extends JpaRepository<Funcionario, Long> 
 
 	@Query(value = "select f from Funcionario f where upper(trim(f.cpf)) like %?1%")
 	Funcionario buscarPorCpf(String cpf);
+
 }
